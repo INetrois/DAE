@@ -2,6 +2,39 @@
 name = "dae"
 version = "0.0.1"
 description = "DAE is an automation platform that allows you to build complex workflows."
-readme = "README.md"
+authors = [{ name = "Netronis" }]
 requires-python = ">=3.12"
+license = "Apache-2.0"
+readme = "README.md"
+
 dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4.2",
+  "ruff>=0.6.9",
+  "mypy>=1.11.2",
+]
+
+docs = [
+  "mkdocs>=1.6.1",
+  "mkdocs-autorefs>=1.4.3",
+  "mkdocs-git-revision-date-localized-plugin>=1.5.0",
+  "mkdocs-material>=9.6.23",
+  "mkdocs-minify-plugin>=0.8.0",
+  "mkdocstrings[python]>=0.30.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/INetrois/DAE"
+Source = "https://github.com/INetrois/DAE"
+Author = "https://github.com/INetrois"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-v --tb=short --strict-markers"
+markers = [
+  "slow: marks tests as slow",
+  "integration: marks tests as integration tests",
+]

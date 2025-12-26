@@ -1,0 +1,7 @@
+[project]
+name = "dae"
+version = "0.0.1"
+description = "DAE is an automation platform that allows you to build complex workflows."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
